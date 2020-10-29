@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.3.4.RELEASE'
+	id 'org.springframework.boot' version '2.1.6.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	id 'java'
 }
@@ -24,14 +24,15 @@ ext {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	
-	implementation 'io.github.resilience4j:resilience4j-circuitbreaker:1.1.0'
-  	implementation 'io.github.resilience4j:resilience4j-ratelimiter:1.1.0'
-  	implementation 'io.github.resilience4j:resilience4j-bulkhead:1.1.0'
-  	implementation 'io.github.resilience4j:resilience4j-cache:1.1.0'
-  	compile "io.github.resilience4j:resilience4j-timelimiter:1.1.0"
-  	compile "io.github.resilience4j:resilience4j-all:1.1.0"
-  	compile "io.github.resilience4j:resilience4j-retry:1.1.0"
+	compile 'io.github.resilience4j:resilience4j-circuitbreaker:1.5.0'
+  	compile 'io.github.resilience4j:resilience4j-ratelimiter:1.5.0'
+  	compile 'io.github.resilience4j:resilience4j-bulkhead:1.5.0'
+  	compile 'io.github.resilience4j:resilience4j-cache:1.5.0'
+  	compile "io.github.resilience4j:resilience4j-timelimiter:1.5.0"
+  	compile "io.github.resilience4j:resilience4j-all:1.5.0"
+  	compile "io.github.resilience4j:resilience4j-retry:1.5.0"
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
